@@ -7,7 +7,7 @@ import Content from "./components/Content";
 
 export default function App() {
   return (
-    <Router basename="/">
+    <Router basename="/react-test-app">
       <div>
         <Menu />
         <Switch>
