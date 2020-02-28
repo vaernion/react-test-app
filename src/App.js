@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Home from "./components/Home";
 import About from "./components/About";
-import Content from "./components/Content";
+import Media from "./components/Media";
 
 export default function App() {
   return (
@@ -17,8 +17,8 @@ export default function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/content">
-            <Content />
+          <Route path="/media">
+            <Media />
           </Route>
         </Switch>
       </div>
@@ -36,7 +36,7 @@ function Menu() {
         <Link to="/about">About</Link>
       </li>
       <li>
-        <Link to="/content">Content</Link>
+        <Link to="/media">Media</Link>
       </li>
     </ul>
   );
