@@ -41,26 +41,28 @@ export default class App extends React.Component {
       <Router basename="/react-test-app">
         <Menu />
         <div id="pageContainer">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/signup">
-              <Signup />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/media">
-              <Media />
-            </Route>
-            <Route path="/secret" {...this.state}>
-              <Secret />
-            </Route>
-          </Switch>
+          <div>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/login">
+                <Login />
+              </Route>
+              <Route path="/signup">
+                <Signup />
+              </Route>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/media">
+                <Media />
+              </Route>
+              <Route path="/secret" {...this.state}>
+                <Secret />
+              </Route>
+            </Switch>
+          </div>
         </div>
       </Router>
     );

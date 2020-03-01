@@ -25,15 +25,34 @@
   text-align: center;
 }
 #pageContainer {
+  flex: 1;
+  background-color: #282c34;
+  color: white;
+  padding: 0px 300px;
+}
+#pageContainer div:first-child {
+  text-align: center;
   display: flex;
-  flex-flow: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
-  color: white;
-  background-color: #282c34;
 }
-#pageContainer > div {
-  height: 100%;
-  min-height: 100%;
+
+#loginOuter {
+  min-height: 30vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#login {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+#login form {
+  align-self: center;
+  border: 3px solid red;
+  padding: 1em;
+  background-color: skyblue;
+  color: black;
 }

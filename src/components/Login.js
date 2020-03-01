@@ -39,27 +39,29 @@ export default class Login extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <div>
-        login form
-        <br />
-        <form onSubmit={this.handleSubmit} onKeyPress={this.handleKeyPress}>
-          <input
-            type="text"
-            name="username"
-            onChange={this.handleChange}
-            placeholder="username"
-            autoFocus
-          />
-          <br />
-          <input
-            type="password"
-            name="password"
-            onChange={this.handleChange}
-            placeholder="password"
-          />
-          <br />
-          <button type="submit">submit</button>
-        </form>
+      <div id="loginOuter">
+        <div id="login">
+          <form onSubmit={this.handleSubmit} onKeyPress={this.handleKeyPress}>
+            login
+            <br />
+            <input
+              type="text"
+              name="username"
+              onChange={this.handleChange}
+              placeholder="username"
+              autoFocus
+            />
+            <br />
+            <input
+              type="password"
+              name="password"
+              onChange={this.handleChange}
+              placeholder="password"
+            />
+            <br />
+            <button type="submit">submit</button>
+          </form>
+        </div>
         <div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
