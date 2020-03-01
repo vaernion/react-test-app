@@ -15,9 +15,8 @@ const subpages = ["About", "Media", "Secret", "Login", "Signup"];
 
 function Menu() {
   return (
-    <div id="menu">
+    <nav id="menu">
       <Link to="/">
-        Home
         <img src={logo} alt="home" width="100px" />
       </Link>
       <ul>
@@ -27,7 +26,7 @@ function Menu() {
           </li>
         ))}
       </ul>
-    </div>
+    </nav>
   );
 }
 
@@ -41,7 +40,7 @@ export default class App extends React.Component {
     return (
       <Router basename="/react-test-app">
         <Menu />
-        <div>
+        <div id="pageContainer">
           <Switch>
             <Route exact path="/">
               <Home />
