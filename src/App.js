@@ -15,18 +15,22 @@ const subpages = ["About", "Media", "Secret", "Login", "Signup"];
 
 function Menu() {
   return (
-    <nav id="menu">
+    <div id="menuContainer">
       <Link to="/">
         <img src={logo} alt="home" width="100px" />
       </Link>
-      <ul>
-        {subpages.map((page, i) => (
-          <li key={i}>
-            <Link to={"/" + page}>{page}</Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+      <div id="menu">
+        <nav>
+          <ul>
+            {subpages.map((page, i) => (
+              <li key={i}>
+                <Link to={"/" + page}>{page}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </div>
   );
 }
 
@@ -41,28 +45,26 @@ export default class App extends React.Component {
       <Router basename="/react-test-app">
         <Menu />
         <div id="pageContainer">
-          <div>
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/login">
-                <Login />
-              </Route>
-              <Route path="/signup">
-                <Signup />
-              </Route>
-              <Route path="/about">
-                <About />
-              </Route>
-              <Route path="/media">
-                <Media />
-              </Route>
-              <Route path="/secret" {...this.state}>
-                <Secret />
-              </Route>
-            </Switch>
-          </div>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/signup">
+              <Signup />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/media">
+              <Media />
+            </Route>
+            <Route path="/secret" {...this.state}>
+              <Secret />
+            </Route>
+          </Switch>
         </div>
       </Router>
     );

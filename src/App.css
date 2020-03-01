@@ -4,17 +4,17 @@
   flex-flow: column;
 }
 
-#menu {
+#menuContainer {
   display: flex;
 }
-
+#menu {
+}
 #menu ul {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
 }
-
 #menu li {
   flex: 3;
   padding: 20px 5px;
@@ -24,30 +24,31 @@
   text-decoration: none;
   text-align: center;
 }
+
 #pageContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   flex: 1;
   background-color: #282c34;
   color: white;
-  padding: 0px 300px;
 }
-#pageContainer div:first-child {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#pageContainer > :first-child {
+  padding: 0px 300px;
 }
 
 #loginOuter {
-  min-height: 30vh;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  flex: 1;
 }
 #login {
-  display: flex;
-  justify-content: center;
   flex: 1;
+  padding-top: 150px;
 }
 #login form {
   align-self: center;
@@ -55,4 +56,8 @@
   padding: 1em;
   background-color: skyblue;
   color: black;
+}
+#text {
+  align-self: flex-start;
+  flex: 2;
 }
