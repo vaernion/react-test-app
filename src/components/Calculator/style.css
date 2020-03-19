@@ -1,0 +1,19 @@
+.calcHeader {
+  padding-bottom: 3em;
+}
+.calcHeader h3 {
+  margin: 0;
+}
+
+.calcBody {
+  padding-bottom: 2em;
+}
+
+.inputOuter {
+  display: flex;
+  width: 15em;
+  border: solid red;
+}
+.input {
+  flex-grow: 1;
+}
