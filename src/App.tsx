@@ -1,41 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
+import About from "./components/About";
 import Home from "./components/Home";
 import Login from "./components/Login";
-import Signup from "./components/Signup";
-import About from "./components/About";
 import Media from "./components/Media";
+import { Menu } from "./components/Menu";
 import Secret from "./components/Secret";
-
-import "./App.css";
-import logo from "./logo.svg";
-
-const subpages = ["About", "Media", "Secret", "Login", "Signup"];
-
-function Menu() {
-  return (
-    <div id="menuContainer">
-      <Link to="/">
-        <img src={logo} alt="home" width="100px" />
-      </Link>
-      <div id="menu">
-        <nav>
-          <ul>
-            {subpages.map((page, i) => (
-              <li key={i}>
-                <Link to={"/" + page}>{page}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-    </div>
-  );
-}
+import Signup from "./components/Signup";
 
 export default class App extends React.Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = { hasLoggedIn: false, userId: 0, isAnon: false };
   }
